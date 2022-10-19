@@ -22,4 +22,4 @@ import numpy as np
 
 # pdb.set_trace()
 
-1
+print([i for i in range(3000 - 2900)])

@@ -1,3 +1,4 @@
+from cProfile import label
 import pdb
 import numpy as np
 import reservoirpy as respy
@@ -6,11 +7,12 @@ from reservoirpy.observables import rmse, rsquare
 import pandas as pd
 import hydroeval as he
 from matplotlib import pyplot as plt
+import seaborn as sns
 
 def normal_w(n, m, **kwargs):
     return np.random.normal(0,1,size=(n,m))
 
-NUM_MODELS = 1
+NUM_MODELS = 10
 
 TEMP_PREDICTION = 'temperature_predictions'
 TEMP_ACTUAL = 'temperature_actual'
@@ -25,19 +27,20 @@ FEATURES = ['Temperature (Mean)', 'Discharge (Mean)', 'Dissolved Oxygen (Mean)',
 ALL_LONGTERM_FEATURES = ['Temperature (Max)', 'Temperature (Mean)', 'Temperature (Min)', 'Discharge (Mean)',
                     'Specific Conductance (Max)', 'Specific Conductance (Mean)', 'Specific Conductance (Min)']
 
-LONGTERM_FEATURES = ['Temperature (Mean)', 'Discharge (Mean)', 'Specific Conductance (Mean)']
+LONGTERM_FEATURES = ['Temperature (Mean)']
 
 df_longterm = pd.DataFrame(pd.read_csv('colorado_river_longterm.csv'))
 df_shortterm = pd.DataFrame(pd.read_csv('colorado_river_oxygen_combined.csv'))
 
 data = df_longterm[LONGTERM_FEATURES].dropna().to_numpy()
 
-temp = data[:, 0].reshape(-1,1)
-discharge = data[:, 1].reshape(-1,1)
-conductance = data[:, 2].reshape(-1,1)
+temp = data.reshape(-1,1)
+# discharge = data[:, 1].reshape(-1,1)
+# conductance = data[:, 2].reshape(-1,1)
 
 data = df_shortterm['Dissolved Oxygen (Mean)'].dropna().to_numpy()
 oxygen = data.reshape(-1, 1)
+
 
 # plt.figure(figsize=(10, 3))
 # plt.title("Longterm Temperature.")
@@ -105,7 +108,9 @@ for i in range(NUM_MODELS):
     plt.title("Temperature Predictions.")
     plt.ylabel("$Temperature(t) (C)$")
     plt.xlabel("$t$")
-    plt.plot(temp_predictions)
+    plt.plot(temp_predictions, label='Predictions')
+    plt.plot(temp[9002:], label='Actual')
+    plt.legend()
     # plt.show()
     plt.savefig('temperature_predictions' + str(i) + '.png')
 
@@ -115,45 +120,24 @@ for i in range(NUM_MODELS):
     plt.title("Dissolved Oxygen Predictions.")
     plt.ylabel("$Oxygen(t)$")
     plt.xlabel("$t$")
-    plt.plot(oxygen_predictions)
+    plt.plot(oxygen_predictions, label='Predictions')
+    plt.plot(oxygen[2302:], label='Actual ')
+    plt.legend()
     # plt.show()
     plt.savefig('oxygen_predictions' + str(i) + '.png')
 
-plt.figure(figsize=(10, 3))
-plt.title("Actual Temperature.")
-plt.ylabel("$Temperature(t) (C)$")
-plt.xlabel("$t$")
-plt.plot(temp[9002:])
-# plt.show()
-plt.savefig('temperature_actual.png')
+# plt.figure(figsize=(10, 3))
+# plt.title("Actual Temperature.")
+# plt.ylabel("$Temperature(t) (C)$")
+# plt.xlabel("$t$")
+# plt.plot(temp[9002:])
+# # plt.show()
+# plt.savefig('temperature_actual.png')
 
-plt.figure(figsize=(10, 3))
-plt.title("Actual Dissolved Oxygen.")
-plt.ylabel("$Oxygen(t)$")
-plt.xlabel("$t$")
-plt.plot(oxygen[2302:])
-# plt.show()
-plt.savefig('oxygen_actual.png')
-
-file = open('results.txt', 'w')
-file.write("Root Mean Squared Error:\n")
-file.write("Temp:\n")
-file.write(temperature_rmses)
-file.write("\n\n")
-file.write("Oxygen:\n")
-file.write(oxygen_rmses)
-file.write("\n\n")
-file.write("R2:\n")
-file.write("Temp:\n")
-file.write(temperature_rsquares)
-file.write("\n\n")
-file.write("Oxygen:\n")
-file.write(oxygen_rsquares)
-file.write("\n\n")
-file.write("NSE:\n")
-file.write("Temp:\n")
-file.write(temperature_nses)
-file.write("\n\n")
-file.write("Oxygen:\n")
-file.write(oxygen_nses)
-file.write("\n\n")
+# plt.figure(figsize=(10, 3))
+# plt.title("Actual Dissolved Oxygen.")
+# plt.ylabel("$Oxygen(t)$")
+# plt.xlabel("$t$")
+# plt.plot(oxygen[2302:])
+# # plt.show()
+# plt.savefig('oxygen_actual.png')
