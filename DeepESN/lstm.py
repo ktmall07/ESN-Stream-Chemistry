@@ -41,7 +41,7 @@ oxygen = data
 
 forecaster = Forecaster(y=temp, current_dates=temp_dates)
 
-forecaster.set_test_length(50)
+forecaster.set_test_length(1000)
 forecaster.generate_future_dates(1000)
 forecaster.set_estimator('lstm')
 
