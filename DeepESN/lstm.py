@@ -41,11 +41,11 @@ oxygen = data
 
 forecaster = Forecaster(y=temp, current_dates=temp_dates)
 
-forecaster.set_test_length(1000)
+forecaster.set_test_length(50)
 forecaster.generate_future_dates(1000)
 forecaster.set_estimator('lstm')
 
-forecaster.manual_forecast(call_me='lstm_default', lags= 24, epochs= 5)
+forecaster.manual_forecast(call_me='lstm_default', lags= 24, epochs= 25)
 forecaster.plot_test_set(ci=True)
 
 plt.show()
