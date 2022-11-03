@@ -1,13 +1,10 @@
-from cProfile import label
 import pdb
 import numpy as np
 import reservoirpy as respy
-from reservoirpy import datasets
 from reservoirpy.observables import rmse, rsquare
 import pandas as pd
 import hydroeval as he
 from matplotlib import pyplot as plt
-import seaborn as sns
 
 def normal_w(n, m, **kwargs):
     return np.random.normal(0,1,size=(n,m))

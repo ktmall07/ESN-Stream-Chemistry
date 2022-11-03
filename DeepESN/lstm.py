@@ -24,16 +24,28 @@ FEATURES = ['Temperature (Mean)', 'Discharge (Mean)', 'Dissolved Oxygen (Mean)',
 ALL_LONGTERM_FEATURES = ['Temperature (Max)', 'Temperature (Mean)', 'Temperature (Min)', 'Discharge (Mean)',
                     'Specific Conductance (Max)', 'Specific Conductance (Mean)', 'Specific Conductance (Min)']
 
-LONGTERM_FEATURES = ['Temperature (Mean)', 'Discharge (Mean)', 'Specific Conductance (Mean)']
+LONGTERM_FEATURES = ['Temperature (Mean)', 'datetime']
 
 df_longterm = pd.DataFrame(pd.read_csv('colorado_river_longterm.csv'))
 df_shortterm = pd.DataFrame(pd.read_csv('colorado_river_oxygen_combined.csv'))
 
+# pdb.set_trace()
+
 data = df_longterm[LONGTERM_FEATURES].dropna().to_numpy()
 
 temp = data[:, 0]
+temp_dates = data[:, 1]
 
 data = df_shortterm['Dissolved Oxygen (Mean)'].dropna().to_numpy()
 oxygen = data
 
-forecaster = Forecaster()
+forecaster = Forecaster(y=temp, current_dates=temp_dates)
+
+forecaster.set_test_length(1000)
+forecaster.generate_future_dates(1000)
+forecaster.set_estimator('lstm')
+
+forecaster.manual_forecast(call_me='lstm_default', lags= 24, epochs= 5)
+forecaster.plot_test_set(ci=True)
+
+plt.show()
