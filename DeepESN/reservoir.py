@@ -1,4 +1,4 @@
-import pdb
+import time
 import numpy as np
 import reservoirpy as respy
 from reservoirpy.observables import rmse, rsquare
@@ -38,21 +38,6 @@ temp = data.reshape(-1,1)
 data = df_shortterm['Dissolved Oxygen (Mean)'].dropna().to_numpy()
 oxygen = data.reshape(-1, 1)
 
-
-# plt.figure(figsize=(10, 3))
-# plt.title("Longterm Temperature.")
-# plt.ylabel("$Temperature (C)$")
-# plt.xlabel("$t$")
-# plt.plot(temp)
-# plt.show()
-
-# plt.figure(figsize=(10, 3))
-# plt.title("Daily Mean Dissolved Oxygen")
-# plt.ylabel("$Dissolved Oxygen$")
-# plt.xlabel("$t$")
-# plt.plot(oxygen)
-# plt.show()
-
 # Lists of Results from each model
 temperature_rmses = []
 oxygen_rmses = []
@@ -60,6 +45,8 @@ temperature_rsquares = []
 oxygen_rsquares = []
 temperature_nses = []
 oxygen_nses = []
+
+times = []
 
 
 for i in range(NUM_MODELS):
@@ -72,10 +59,15 @@ for i in range(NUM_MODELS):
     temp_esn = reservoir1 >> readout1
     oxygen_esn = reservoir2 >> readout2
 
+    start = time.time()
     temp_predictions = temp_esn.fit(temp[:9000], temp[1:9001])
-    oxygen_esn.fit(oxygen[:2300], oxygen[1:2301])
     temp_predictions = temp_esn.run(temp[9001:-1]) 
+    end = time.time()
+    oxygen_esn.fit(oxygen[:2300], oxygen[1:2301])
     oxygen_predictions = oxygen_esn.run(oxygen[2301:-1])
+
+    t = start - end
+    times.append(t)
 
     # Results
     temp_rmse = rmse(temp[9002:], temp_predictions)
@@ -123,15 +115,18 @@ for i in range(NUM_MODELS):
     # # plt.show()
     # plt.savefig('oxygen_predictions' + str(i) + '.png')
 
-plt.figure(figsize=(10,3))
-plt.title('Water Temperature Model NSE Values')
-plt.hist(temperature_nses)
-# plt.xlabel('NSE Values')
-plt.savefig('temp_nse_hist.png')
+# plt.figure(figsize=(10,3))
+# plt.title('Water Temperature Model NSE Values')
+# plt.hist(temperature_nses)
+# # plt.xlabel('NSE Values')
+# plt.savefig('temp_nse_hist.png')
 
-plt.figure(figsize=(10,3))
-plt.title('Dissolved Oxygen Model NSE Values')
-plt.hist(oxygen_nses)
-# plt.xlabel('NSE values')
-plt.tight_layout()
-plt.savefig('do_nse_hist.png')
+# plt.figure(figsize=(10,3))
+# plt.title('Dissolved Oxygen Model NSE Values')
+# plt.hist(oxygen_nses)
+# # plt.xlabel('NSE values')
+# plt.tight_layout()
+# plt.savefig('do_nse_hist.png')
+
+print(temperature_nses)
+print(times)

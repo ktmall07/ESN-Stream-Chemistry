@@ -1,4 +1,4 @@
-import pdb
+import time
 import numpy as np
 import reservoirpy as respy
 from reservoirpy import datasets
@@ -45,7 +45,13 @@ forecaster.set_test_length(1000)
 forecaster.generate_future_dates(1000)
 forecaster.set_estimator('lstm')
 
-forecaster.manual_forecast(call_me='lstm_default', lags= 24, epochs= 25)
+start = time.time()
+forecaster.manual_forecast(call_me='lstm_default', lags= 50, epochs= 100)
+end = time.time()
 forecaster.plot_test_set(ci=True)
+
+print('Time: ', end - start)
+
+forecaster.export('model_summaries', determine_best_by='LevelTestSetR2', to_excel=True)[['ModelNickname', 'LevelTestSetRMSE', 'LevelTestSetR2']]
 
 plt.show()
