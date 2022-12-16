@@ -50,7 +50,7 @@ forecaster.manual_forecast(call_me='lstm_default', lags= 50, epochs= 100)
 end = time.time()
 forecaster.plot_test_set(ci=True)
 
-print('Time: ', end - start)
+print('Time: ', end - start) 
 
 forecaster.export('model_summaries', determine_best_by='LevelTestSetR2', to_excel=True)[['ModelNickname', 'LevelTestSetRMSE', 'LevelTestSetR2']]
 

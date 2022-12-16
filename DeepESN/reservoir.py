@@ -66,7 +66,7 @@ for i in range(NUM_MODELS):
     oxygen_esn.fit(oxygen[:2300], oxygen[1:2301])
     oxygen_predictions = oxygen_esn.run(oxygen[2301:-1])
 
-    t = start - end
+    t = end - start
     times.append(t)
 
     # Results
@@ -84,13 +84,13 @@ for i in range(NUM_MODELS):
     temperature_nses.append(temp_nse)
     oxygen_nses.append(oxygen_nse)
 
-    print("Temp rmse: ", temp_rmse)
-    print("Temp rsquare: ", temp_rsquare)
-    print("Temp nse: ", temp_nse)
+    # print("Temp rmse: ", temp_rmse)
+    # print("Temp rsquare: ", temp_rsquare)
+    # print("Temp nse: ", temp_nse)
 
-    print("Oxygen rmse: ", oxygen_rmse)
-    print("Oxygen rsquare", oxygen_rsquare)
-    print("Oxygen_nse: ", oxygen_nse)
+    # print("Oxygen rmse: ", oxygen_rmse)
+    # print("Oxygen rsquare", oxygen_rsquare)
+    # print("Oxygen_nse: ", oxygen_nse)
 
     # # Temperature results
     # plt.figure(figsize=(10, 3))
@@ -128,5 +128,24 @@ for i in range(NUM_MODELS):
 # plt.tight_layout()
 # plt.savefig('do_nse_hist.png')
 
-print(temperature_nses)
-print(times)
+lstm_results = pd.DataFrame(pd.read_excel('results.xlsx'))
+
+lstm_rmse = rmse(lstm_results['actual'], lstm_results['lstm_default'])
+lstm_rsquare = rsquare(lstm_results['actual'], lstm_results['lstm_default'])
+lstm_nse = he.evaluator(he.nse, lstm_results['actual'], lstm_results['lstm_default'])[0]
+lstm_time = 306.88285303115845
+
+fig, axs = plt.subplots(1, 2, figsize=(6,3), sharey=False, sharex=True)
+
+axs[0].bar(['ESN', 'LSTM'], [max(temperature_nses), lstm_nse])
+axs[0].set_ylabel('NSE Values')
+axs[0].set_ylim(0.0, 1.0)
+
+axs[1].bar(['ESN', 'LSTM'], [max(times), lstm_time])
+axs[1].set_ylabel('Training time (s)')
+fig.suptitle('ESN vs LSTM Performance')
+plt.tight_layout()
+plt.savefig('comparison.png')
+
+print('ESN Model NSE values: ', temperature_nses)
+print('ESN train/test times: ', times)
