@@ -143,7 +143,7 @@ axs[0].set_ylim(0.0, 1.0)
 
 axs[1].bar(['ESN', 'LSTM'], [max(times), lstm_time])
 axs[1].set_ylabel('Training time (s)')
-fig.suptitle('ESN vs LSTM Performance')
+fig.suptitle('ESN vs LSTM Training Time')
 plt.tight_layout()
 plt.savefig('comparison.png')
 

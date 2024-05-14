@@ -39,7 +39,7 @@ temp_dates = data[:, 1]
 data = df_shortterm['Dissolved Oxygen (Mean)'].dropna().to_numpy()
 oxygen = data
 
-forecaster = Forecaster(y=temp, current_dates=temp_dates)
+forecaster = Forecaster(y=temp, test_length=1000, current_dates=temp_dates, cis=True)
 
 forecaster.set_test_length(1000)
 forecaster.generate_future_dates(1000)
@@ -52,6 +52,6 @@ forecaster.plot_test_set(ci=True)
 
 print('Time: ', end - start) 
 
-forecaster.export('model_summaries', determine_best_by='LevelTestSetR2', to_excel=True)[['ModelNickname', 'LevelTestSetRMSE', 'LevelTestSetR2']]
+forecaster.export('model_summaries', determine_best_by='TestSetR2', to_excel=True)[['ModelNickname', 'TestSetRMSE', 'TestSetR2']]
 
 plt.show()
