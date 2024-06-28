@@ -100,7 +100,7 @@ for i in range(NUM_MODELS):
 
     # Temperature results
     plt.figure(figsize=(10, 3))
-    plt.title("Temperature Predictions")
+    plt.title("Temperature Model Fit")
     plt.ylabel("$Water\ Temperature\ (°C)$")
     plt.xlabel("$Time\  (Days)$")
     plt.plot(temp_data['datetime'][-1709:], temp_predictions, label='Predicted Temperature')
@@ -111,7 +111,7 @@ for i in range(NUM_MODELS):
 
     # Dissolved do Results
     plt.figure(figsize=(10, 3))
-    plt.title("Dissolved Oxygen Predictions")
+    plt.title("Dissolved Oxygen Model Fit")
     plt.ylabel("$Dissolved\ Oxygen\ (mg/L)$")
     plt.xlabel("$Time\ (Days)$")
     plt.plot(do_predictions, label='Predicted Dissolved Oxygen')
@@ -120,18 +120,8 @@ for i in range(NUM_MODELS):
     plt.tight_layout()
     plt.savefig('./figs/do_predictions' + str(i) + '.png')
 
-# plt.figure(figsize=(10,3))
-plt.title('Water Temperature Model NSE Values')
-plt.boxplot(temperature_nses)
-# plt.xlabel('NSE Values')
-plt.savefig('temp_nse_hist.png')
-
-# plt.figure(figsize=(10,3))
-plt.title('Dissolved Oxygen Model NSE Values')
-plt.boxplot(do_nses)
-# plt.xlabel('NSE values')
-plt.tight_layout()
-plt.savefig('do_nse_hist.png')
+    # Close Generated Figures after saving
+    plt.close()
 
 lstm_temp_fitted = pd.DataFrame(pd.read_csv('temperature_fitted.csv'))
 lstm_temp_time = lstm_temp_fitted['training_time'][0]
@@ -156,6 +146,22 @@ lstm_do_rmse = lstm_do_results['TestSetRMSE']
 lstm_do_rsquare = lstm_do_results['TestSetR2']
 lstm_do_nse = he.evaluator(he.nse, lstm_do_fitted['Actuals'][-100:], lstm_do_fitted['FittedVals'][-100:])[0]
 
+fig, axs = plt.subplots(1, 2, figsize=(6,3), sharey=False, sharex= True)
+
+axs[0].boxplot(temperature_nses)
+axs[0].set_xlabel('Temperature')
+axs[0].set_ylim(0.0, 1.0)
+axs[0].set_xticks(ticks=[])
+
+axs[1].boxplot(do_nses)
+axs[1].set_xlabel('Dissolved Oxygen')
+axs[1].set_ylim(0.0, 1.0)
+axs[1].set_xticks(ticks=[])
+fig.suptitle('ESN Model NSE Distributions')
+# plt.xlabel('Nash-Sutcliffe Efficiency')
+plt.tight_layout()
+plt.savefig('boxplots.png')
+
 # Temp Figure
 fig, axs = plt.subplots(1, 2, figsize=(6,3), sharey=False, sharex=True)
 
@@ -165,35 +171,20 @@ axs[0].set_ylim(0.0, 1.0)
 
 axs[1].bar(['ESN', 'LSTM'], [max(times), lstm_temp_time])
 axs[1].set_ylabel('Training time (s)')
-fig.suptitle('ESN vs LSTM Training Time')
+fig.suptitle('ESN vs LSTM Model fit and Training Time')
 plt.tight_layout()
 plt.savefig('temp_comparison.png')
-
-fig, axs = plt.subplots(1, 2, figsize=(6,3), sharey=False, sharex= True)
-
-axs[0].boxplot(temperature_nses)
-axs[0].set_ylabel('Temperature Model NSE Values')
-axs[0].set_ylim(0.0, 1.0)
-
-axs[1].boxplot(do_nses)
-axs[1].set_xlabel('Nash-Sutcliffe Efficiency')
-axs[1].set_ylabel('Dissolved Oxygen Model NSE Values')
-axs[1].set_ylim(0.0, 1.0)
-fig.suptitle('Model NSE Values')
-plt.xlabel('Nash-Sutcliffe Efficiency')
-plt.tight_layout()
-plt.savefig('boxplots.png')
 
 
 # DO Figures
 fig, axs = plt.subplots(1, 2, figsize=(6,3), sharey=False, sharex=True)
 
 axs[0].bar(['ESN', 'LSTM'], [max(do_nses), lstm_do_permutations_nse])
-axs[0].set_ylabel('DO Model NSE Values')
+axs[0].set_ylabel('Dissolved Oxygen Model NSE Values')
 axs[0].set_ylim(0.0, 1.0)
 
 axs[1].bar(['ESN', 'LSTM'], [max(times), lstm_dop_time])
 axs[1].set_ylabel('Training time (s)')
-fig.suptitle('ESN vs LSTM Training Time')
+fig.suptitle('ESN vs LSTM Model Fit and Training Time')
 plt.tight_layout()
 plt.savefig('dop_comparison.png')
