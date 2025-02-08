@@ -31,8 +31,8 @@ df_longterm = pd.DataFrame(pd.read_csv('./colorado_river_longterm.csv'))
 oxygen_permutations = pd.DataFrame(pd.read_csv('./colorado_river_oxygen_combined.csv'))
 oxygen = pd.DataFrame(pd.read_csv('./colorado_river_oxygen.csv'))
 
-print(len(oxygen))
-print(len(oxygen_permutations))
+# print(len(oxygen))
+# print(len(oxygen_permutations))
 
 data = df_longterm[LONGTERM_FEATURES].dropna().to_numpy()
 
@@ -46,6 +46,26 @@ dop_do, dop_dates = dop[:, 0], dop[:, 1]
 do_do, do_dates = do[:, 0], do[:, 1]
 
 
+temp_grid = {
+    "batch_size": [16, 32, 64],  # Batch sizes to test
+    "epochs": [10, 50, 100],    # Epoch counts to test
+    "layers_struct": [
+        [{"units": 50, "dropout": 0.2}],  # Single-layer LSTM with 50 units and 0.2 dropout
+        [{"units": 100, "dropout": 0.3}, {"units": 50, "dropout": 0.2}],  # Two-layer LSTM
+        [{"units": 150, "dropout": 0.4}, {"units": 100, "dropout": 0.3}, {"units": 50, "dropout": 0.2}],  # Three-layer LSTM
+    ],
+}
+
+dop_grid = {
+    "batch_size": [16, 32, 64],  # Batch sizes to test
+    "epochs": [10, 50, 100],    # Epoch counts to test
+    "layers_struct": [
+        [{"units": 50, "dropout": 0.2}],  # Single-layer LSTM with 50 units and 0.2 dropout
+        [{"units": 100, "dropout": 0.3}, {"units": 50, "dropout": 0.2}],  # Two-layer LSTM
+        [{"units": 150, "dropout": 0.4}, {"units": 100, "dropout": 0.3}, {"units": 50, "dropout": 0.2}],  # Three-layer LSTM
+    ],
+}
+
 
 temp_forecaster = Forecaster(y=temp, test_length=1000, current_dates=temp_dates, cis=True)
 dop_forecaster = Forecaster(y=dop_do, test_length=300, current_dates=dop_dates, cis=True)
@@ -54,17 +74,26 @@ do_forecaster = Forecaster(y=do_do, test_length=100, current_dates=do_dates, cis
 temp_forecaster.set_test_length(1000)
 temp_forecaster.generate_future_dates(1000)
 temp_forecaster.set_estimator('lstm')
+temp_forecaster.ingest_grid(temp_grid)
+temp_forecaster.tune()
+print(temp_forecaster.best_params)
 
 dop_forecaster.set_test_length(300)
 dop_forecaster.generate_future_dates(300)
 dop_forecaster.set_estimator('lstm')
+dop_forecaster.ingest_grid(dop_grid)
+dop_forecaster.tune()
+print(dop_forecaster.best_params)
 
 do_forecaster.set_test_length(100)
 do_forecaster.generate_future_dates(100)
 do_forecaster.set_estimator('lstm')
 
 start = time.time()
-temp_forecaster.manual_forecast(call_me='Temperature', lags= 100, epochs= 50)
+temp_forecaster.manual_forecast(call_me='Temperature', lags= 100, 
+                                batch_size=temp_forecaster.best_params['batch_size'], 
+                                epochs=temp_forecaster.best_params['epochs'],
+                                layers_struct = temp_forecaster.best_params['layers_struct'])
 end = time.time()
 temp_forecaster.plot_test_set(ci=True)
 plt.ylabel('Temperature (°C)')
@@ -73,7 +102,10 @@ temp_time = end - start
 print('Temperature Time: ', temp_time) 
 
 start = time.time()
-dop_forecaster.manual_forecast(call_me='DO With Permutations', lags=20, epochs=50)
+dop_forecaster.manual_forecast(call_me='DO With Permutations', lags= 20, 
+                                batch_size=dop_forecaster.best_params['batch_size'], 
+                                epochs=dop_forecaster.best_params['epochs'],
+                                layers_struct = dop_forecaster.best_params['layers_struct'])
 end = time.time()
 dop_forecaster.plot_test_set(ci=True)
 plt.ylabel('Dissolved Oxygen (mg/L)')
@@ -91,6 +123,9 @@ do_forecaster.plot_test_set(ci=True)
 
 do_time = end - start
 print('DO time: ', do_time)
+
+print(temp_forecaster.best_params)
+print(dop_forecaster.best_params)
 
 temp_forecaster.export('model_summaries', determine_best_by='TestSetR2', to_excel=True, excel_name='Temperature_Results.xlsx')[['ModelNickname', 'TestSetRMSE', 'TestSetR2']]
 dop_forecaster.export('model_summaries', determine_best_by='TestSetR2', to_excel=True, excel_name='DO_Permutation_Results.xlsx')[['ModelNickname', 'TestSetRMSE', 'TestSetR2']]

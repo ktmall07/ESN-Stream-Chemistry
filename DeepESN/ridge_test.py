@@ -17,15 +17,16 @@ ALL_FEATURES = ['Temperature (Max)', 'Temperature (Mean)', 'Temperature (Min)', 
 FEATURES = ['Temperature (Mean)', 'Discharge (Mean)', 'Dissolved Oxygen (Mean)',
             'Specific Conductance (Mean)', 'pH (Median)', 'Turbidity (Median)']
 ALL_LONGTERM_FEATURES = ['Temperature (Max)', 'Temperature (Mean)', 'Temperature (Min)', 'Discharge (Mean)',
-                    'Specific Conductance (Max)', 'Specific Conductance (Mean)', 'Specific Conductance (Min)']
+                    'Specific Conductance (Max)', 'Specific Conductance (Mean)', 'Specific Conductance (Min)', 'datetime']
 
-LONGTERM_FEATURES = ['Temperature (Mean)']
+LONGTERM_FEATURES = ['Temperature (Mean)', 'datetime']
 
 df_longterm = pd.DataFrame(pd.read_csv('colorado_river_longterm.csv'))
 
-data = df_longterm[LONGTERM_FEATURES].dropna().to_numpy()
+data = df_longterm[LONGTERM_FEATURES].dropna()
 
-temp = data.reshape(-1,1)
+dates = pd.to_datetime(data['datetime'])
+temp = data['Temperature (Mean)'].to_numpy().reshape(-1,1)
 
 res1 = respy.nodes.Reservoir(units=1000, lr = 0.9)
 res2 = respy.nodes.Reservoir(units=1000, lr=0.9)
@@ -61,10 +62,12 @@ large_nse = he.evaluator(he.nse, list(large_predictions), list(temp[9002:]))[0]
 plt.figure(figsize=(10, 3))
 plt.title("Temperature Predictions.")
 plt.ylabel("$Temperature(t) (C)$")
-plt.xlabel("$t$")
-plt.plot(small_predictions, label='ridge=0')
-plt.plot(med_predictions, label='ridge=1e-7')
-plt.plot(large_predictions, label='ridge=1e-15')
-plt.plot(temp[9002:], label='Actual')
+plt.xlabel("Date")
+plt.plot(dates[9002:], small_predictions, label='ridge=0')
+plt.plot(dates[9002:], med_predictions, label='ridge=1e-7')
+plt.plot(dates[9002:], large_predictions, label='ridge=1e-15')
+plt.plot(dates[9002:], temp[9002:], label='Actual')
 plt.legend()
+plt.tight_layout()
+plt.gcf().autofmt_xdate()
 plt.savefig('ridge_size.png')

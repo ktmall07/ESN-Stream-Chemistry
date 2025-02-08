@@ -137,10 +137,12 @@ lstm_do_results = pd.DataFrame(pd.read_excel('D:\Machine Learning\Machine-Learni
 lstm_temp_rmse = lstm_temp_results['TestSetRMSE']
 lstm_temp_rsquare = lstm_temp_results['TestSetR2']
 lstm_temp_nse = he.evaluator(he.nse, lstm_temp_fitted['Actuals'][-1000:], lstm_temp_fitted['FittedVals'][-1000:])[0]
+print(lstm_temp_nse)
 
 lstm_do_permutations_rmse = lstm_dop_results['TestSetRMSE']
 lstm_do_permutations_rsquare = lstm_dop_results['TestSetR2']
 lstm_do_permutations_nse = he.evaluator(he.nse, lstm_dop_fitted['Actuals'][-300:], lstm_dop_fitted['FittedVals'][-300:])[0]
+print(lstm_do_permutations_nse)
 
 lstm_do_rmse = lstm_do_results['TestSetRMSE']
 lstm_do_rsquare = lstm_do_results['TestSetR2']

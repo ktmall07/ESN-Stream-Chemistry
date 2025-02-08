@@ -80,3 +80,355 @@ WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When 
 WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
 WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
 WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:tensorflow:5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000001CC3469E8E0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:tensorflow:6 out of the last 6 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000001CC34478B80> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:tensorflow:5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x00000198A6C15B20> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:tensorflow:6 out of the last 6 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x00000198A8D31D00> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:tensorflow:5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000001E3205668E0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:tensorflow:6 out of the last 6 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000001E320344B80> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:tensorflow:5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x0000023BABE7A8E0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:tensorflow:6 out of the last 6 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x0000023BABC5CB80> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:The dynamic_testing arg is always set to True for the lstm model. This model uses direct forecasting with lags.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+WARNING:root:Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.

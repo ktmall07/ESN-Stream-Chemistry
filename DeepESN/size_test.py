@@ -17,15 +17,16 @@ ALL_FEATURES = ['Temperature (Max)', 'Temperature (Mean)', 'Temperature (Min)', 
 FEATURES = ['Temperature (Mean)', 'Discharge (Mean)', 'Dissolved Oxygen (Mean)',
             'Specific Conductance (Mean)', 'pH (Median)', 'Turbidity (Median)']
 ALL_LONGTERM_FEATURES = ['Temperature (Max)', 'Temperature (Mean)', 'Temperature (Min)', 'Discharge (Mean)',
-                    'Specific Conductance (Max)', 'Specific Conductance (Mean)', 'Specific Conductance (Min)']
+                    'Specific Conductance (Max)', 'Specific Conductance (Mean)', 'Specific Conductance (Min)', 'datetime']
 
-LONGTERM_FEATURES = ['Temperature (Mean)']
+LONGTERM_FEATURES = ['Temperature (Mean)', 'datetime']
 
 df_longterm = pd.DataFrame(pd.read_csv('colorado_river_longterm.csv'))
 
-data = df_longterm[LONGTERM_FEATURES].dropna().to_numpy()
+data = df_longterm[LONGTERM_FEATURES].dropna()
 
-temp = data.reshape(-1,1)
+dates = pd.to_datetime(data['datetime'])
+temp = data['Temperature (Mean)'].to_numpy().reshape(-1,1)
 
 res1 = respy.nodes.Reservoir(units=100, lr = 0.9)
 res2 = respy.nodes.Reservoir(units=1000, lr=0.9)
@@ -63,13 +64,61 @@ print("RMSE: " + str([small_rmse, med_rmse, large_rmse]))
 print("R^2: " + str([small_rsquare, med_rsquare, large_rsquare]))
 print("NSE: " + str([small_nse, med_nse, large_nse]))
 
-plt.figure(figsize=(10, 3))
-plt.title("Temperature Predictions.")
-plt.ylabel("$Temperature(t) (C)$")
-plt.xlabel("$t$")
-plt.plot(small_predictions, label='n=100')
-plt.plot(med_predictions, label='n=1000')
-plt.plot(large_predictions, label='n-10000')
-plt.plot(temp[9002:], label='Actual')
-plt.legend()
-plt.savefig('res_size.png')
+##########################################################################################################################################################################
+      # Ridge Size 
+##########################################################################################################################################################################
+
+res1 = respy.nodes.Reservoir(units=1000, lr = 0.9)
+res2 = respy.nodes.Reservoir(units=1000, lr=0.9)
+res3 = respy.nodes.Reservoir(units=1000, lr=0.9)
+
+read1 = respy.nodes.Ridge()
+read2 = respy.nodes.Ridge(ridge=1e-7)
+read3 = respy.nodes.Ridge(ridge=1e-15)
+
+small = res1 >> read1
+med = res2 >> read2
+large = res3 >> read3
+
+sp = small.fit(temp[:9000], temp[1:9001])
+mp = med.fit(temp[:9000], temp[1:9001])
+lp = large.fit(temp[:9000], temp[1:9001])
+small_ridge_predictions = small.run(temp[9001:-1])
+med_ridge_predictions = med.run(temp[9001:-1])
+large_ridge_predictions = large.run(temp[9001:-1])
+
+small_rmse = rmse(temp[9002:], small_predictions)
+small_rsquare = rsquare(temp[9002:], small_predictions)
+small_nse = he.evaluator(he.nse, list(small_predictions), list(temp[9002:]))[0]
+
+med_rmse = rmse(temp[9002:], med_predictions)
+med_rsquare = rsquare(temp[9002:], med_predictions)
+med_nse = he.evaluator(he.nse, list(med_predictions), list(temp[9002:]))[0]
+
+large_rmse = rmse(temp[9002:], large_predictions)
+large_rsquare = rsquare(temp[9002:], large_predictions)
+large_nse = he.evaluator(he.nse, list(large_predictions), list(temp[9002:]))[0]
+
+fig, axs = plt.subplots(2, 1, figsize=(10, 6))
+
+# plt.figure(figsize=(10, 3))
+fig.suptitle("Effects of Reservoir and Ridge size on Signal Generation")
+axs[0].set_ylabel("$Temperature(t) (C)$")
+axs[0].set_xlabel("Time (Days)")
+axs[0].plot(dates[9002:], small_predictions, label='n=100')
+axs[0].plot(dates[9002:], med_predictions, label='n=1000')
+axs[0].plot(dates[9002:], large_predictions, label='n=10000')
+axs[0].plot(dates[9002:], temp[9002:], label='Actual')
+axs[0].grid(True)
+axs[0].legend()
+axs[1].set_ylabel("$Temperature(t) (C)$")
+axs[1].set_xlabel("Date")
+axs[1].plot(dates[9002:], small_ridge_predictions, label='ridge=0')
+axs[1].plot(dates[9002:], med_ridge_predictions, label='ridge=1e-7')
+axs[1].plot(dates[9002:], large_ridge_predictions, label='ridge=1e-15')
+axs[1].plot(dates[9002:], temp[9002:], label='Actual')
+axs[1].grid(True)
+axs[1].legend()
+plt.tight_layout()
+plt.gcf().autofmt_xdate()
+plt.savefig('esn_tests.png')
